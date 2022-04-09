@@ -1,5 +1,3 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class Localeasy < Formula
   desc "Effortless app localisation using Google Sheets"
   homepage "https://github.com/wvteijlingen/localeasy"
@@ -10,7 +8,7 @@ class Localeasy < Formula
   depends_on "deno" => [:build, :test]
 
   def install
-    system "deno task compile"
+    system "deno", "task", "compile"
     bin.install "localeasy"
   end
 
