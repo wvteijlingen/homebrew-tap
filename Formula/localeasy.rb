@@ -15,6 +15,6 @@ class Localeasy < Formula
   end
 
   test do
-    system "deno task compile"
+    system "#{bin}/localeasy", "--version"
   end
 end
