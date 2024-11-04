@@ -9,7 +9,7 @@ class Xcodeformat < Formula
 
   def install
     system "deno", "task", "compile"
-    bin.install "xcodeformat"
+    bin.install "build/xcodeformat"
   end
 
   test do
