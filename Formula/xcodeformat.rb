@@ -6,7 +6,7 @@ class Xcodeformat < Formula
   license "MIT"
 
   def install
-    bin.install "localeasy"
+    bin.install "xcodeformat"
   end
 
   test do
