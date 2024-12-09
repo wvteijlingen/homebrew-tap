@@ -9,7 +9,7 @@ class Localeasy < Formula
   uses_from_macos "swift" => :build
 
   def install
-    system "swift", "build", "-configuration", "release", "--product", "localeasy"
+    system "swift", "build", "--configuration", "release", "--product", "localeasy"
     bin.install ".build/release/localeasy"
   end
 
