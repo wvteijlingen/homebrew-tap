@@ -2,7 +2,7 @@ class Localeasy < Formula
   desc "Effortless app localisation using Google Sheets"
   homepage "https://github.com/wvteijlingen/localeasy"
   url "https://github.com/wvteijlingen/localeasy/archive/refs/tags/v0.2.tar.gz"
-  sha256 "8b80a16898716cd0f2177573d68f1d3ea43b9c2edc67337a2cfd35f7ecaa7f13"
+  sha256 "23c2a20811892d73dc15075090498de84a4816a3c7bb5a849266832fb120a7e5"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
