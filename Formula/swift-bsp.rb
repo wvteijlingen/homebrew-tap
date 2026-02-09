@@ -1,4 +1,4 @@
-class SwiftBSP < Formula
+class SwiftBsp < Formula
   desc "Build Server Protocol for Swift"
   homepage "https://github.com/wvteijlingen/swift-bsp"
   url "https://github.com/wvteijlingen/swift-bsp/releases/download/v0.1/swift-bsp.tar.gz"
