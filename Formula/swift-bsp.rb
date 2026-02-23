@@ -23,9 +23,9 @@ class SwiftBsp < Formula
       ".build/release/SwiftBuild_SWBUniversalPlatform.bundle",
       ".build/release/SwiftBuild_SWBWebAssemblyPlatform.bundle",
       ".build/release/SwiftBuild_SWBWindowsPlatform.bundle"
-    ].each do |file|
-      filename = File.basename(file)
-      FileUtils.cp(file, File.join(bin, filename))
+    ].each do |source|
+      source_name = File.basename(source)
+      FileUtils.cp_r(source, File.join(bin, source_name))
     end
   end
 
