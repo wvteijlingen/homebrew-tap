@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class SwiftBsp < Formula
   desc "Build Server Protocol for Swift"
   homepage "https://github.com/wvteijlingen/swift-bsp"
@@ -10,18 +12,21 @@ class SwiftBsp < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "--configuration", "release"
+    bin.install(".build/release/swift-bsp")
 
-    bin.install(
-      ".build/release/swift-bsp"
-      # ".build/release/SWBBuildServiceBundle",
-      # ".build/release/SwiftBuild_SWBAndroidPlatform.bundle",
-      # ".build/release/SwiftBuild_SWBApplePlatform.bundle",
-      # ".build/release/SwiftBuild_SWBCore.bundle",
-      # ".build/release/SwiftBuild_SWBQNXPlatform.bundle",
-      # ".build/release/SwiftBuild_SWBUniversalPlatform.bundle",
-      # ".build/release/SwiftBuild_SWBWebAssemblyPlatform.bundle",
-      # ".build/release/SwiftBuild_SWBWindowsPlatform.bundle"
-    )
+    [
+      ".build/release/SWBBuildServiceBundle",
+      ".build/release/SwiftBuild_SWBAndroidPlatform.bundle",
+      ".build/release/SwiftBuild_SWBApplePlatform.bundle",
+      ".build/release/SwiftBuild_SWBCore.bundle",
+      ".build/release/SwiftBuild_SWBQNXPlatform.bundle",
+      ".build/release/SwiftBuild_SWBUniversalPlatform.bundle",
+      ".build/release/SwiftBuild_SWBWebAssemblyPlatform.bundle",
+      ".build/release/SwiftBuild_SWBWindowsPlatform.bundle"
+    ].each do |file|
+      filename = File.basename(file)
+      FileUtils.cp(file, File.join(bin, filename))
+    end
   end
 
   test do
