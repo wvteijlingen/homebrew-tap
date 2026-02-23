@@ -4,7 +4,7 @@ class SwiftBsp < Formula
   desc "Build Server Protocol for Swift"
   homepage "https://github.com/wvteijlingen/swift-bsp"
   url "https://github.com/wvteijlingen/swift-bsp/archive/refs/tags/v0.1.tar.gz"
-  sha256 "37d8205767d344c7025a10bdba16712fee1660b45f587ab5b8f1a5a35bf3279b"
+  sha256 "64a1e7ee288c0fd67c304df1c0c886a91594fad3332fe33d57af878c2b3648ee"
   license "MIT"
 
   depends_on xcode: ["26.0", :build]
