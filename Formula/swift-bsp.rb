@@ -1,5 +1,3 @@
-require 'fileutils'
-
 class SwiftBsp < Formula
   desc "Build Server Protocol for Swift"
   homepage "https://github.com/wvteijlingen/swift-bsp"
@@ -12,7 +10,6 @@ class SwiftBsp < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "--configuration", "release"
-    # bin.install(".build/release/swift-bsp")
 
     [
       ".build/release/swift-bsp",
@@ -27,8 +24,6 @@ class SwiftBsp < Formula
       ".build/release/SwiftBuild_SWBWindowsPlatform.bundle"
     ].each do |source|
       bin.install(source)
-      # source_name = File.basename(source)
-      # FileUtils.cp_r(source, File.join(bin, source_name))
     end
   end
 
