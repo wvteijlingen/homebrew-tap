@@ -12,20 +12,23 @@ class SwiftBsp < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "--configuration", "release"
-    bin.install(".build/release/swift-bsp")
+    # bin.install(".build/release/swift-bsp")
 
     [
+      ".build/release/swift-bsp",
       ".build/release/SWBBuildServiceBundle",
       ".build/release/SwiftBuild_SWBAndroidPlatform.bundle",
       ".build/release/SwiftBuild_SWBApplePlatform.bundle",
       ".build/release/SwiftBuild_SWBCore.bundle",
+      ".build/release/SwiftBuild_SWBGenericUnixPlatform.bundle"
       ".build/release/SwiftBuild_SWBQNXPlatform.bundle",
       ".build/release/SwiftBuild_SWBUniversalPlatform.bundle",
       ".build/release/SwiftBuild_SWBWebAssemblyPlatform.bundle",
       ".build/release/SwiftBuild_SWBWindowsPlatform.bundle"
     ].each do |source|
-      source_name = File.basename(source)
-      FileUtils.cp_r(source, File.join(bin, source_name))
+      bin.install(source)
+      # source_name = File.basename(source)
+      # FileUtils.cp_r(source, File.join(bin, source_name))
     end
   end
 
