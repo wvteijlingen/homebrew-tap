@@ -20,7 +20,7 @@ class SwiftBsp < Formula
       ".build/release/SwiftBuild_SWBAndroidPlatform.bundle",
       ".build/release/SwiftBuild_SWBApplePlatform.bundle",
       ".build/release/SwiftBuild_SWBCore.bundle",
-      ".build/release/SwiftBuild_SWBGenericUnixPlatform.bundle"
+      ".build/release/SwiftBuild_SWBGenericUnixPlatform.bundle",
       ".build/release/SwiftBuild_SWBQNXPlatform.bundle",
       ".build/release/SwiftBuild_SWBUniversalPlatform.bundle",
       ".build/release/SwiftBuild_SWBWebAssemblyPlatform.bundle",
